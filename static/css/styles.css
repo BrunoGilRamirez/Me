@@ -1,96 +1,135 @@
 body {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
-    font-family: Arial, sans-serif;
+    width: 100%;    
+    min-width: 1080px;
+    overflow:auto;
     margin: 0;
     padding: 0;
-    background: #333;
-    color: #333;
+    font-family: 'Times New Roman', sans-serif;
+    background: #181818;
 }
 
 header {
-    background: #871CE6; /* Color principal */
+    background: #06000c; /* Color principal */
     color: white;
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
     text-align: center;
     width: 100%;
+    max-height: fit-content;
 }
-
-h1 {
+header h1 {
     margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
     width: 100%;
     text-align: center;
 }
-
-.container {
-    display: flex;
-    flex-direction: column; /* Cambia la dirección de los elementos a columna */
-    justify-content: center; /* Alinea horizontalmente */
-    align-items: center; /* Alinea verticalmente */
-    width: 100%; /* Usar ancho completo */
-    margin: auto;
+header p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+header a{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: blanchedalmond;
 }
 
-.information {
-    padding: 20px;
-    margin: 10px;
-    border-radius: 10px;
-    max-width: 900px; /* Para mantener responsividad */
-    width: 100%; /* Hacer que se ajuste al contenedor */
-}
-
-#about {
-    background: #1C73E6; /* Sección "Sobre mí" */
-    color: white;
-    margin: 10px;
-}
-
-#social {
-    background: #1CB3E6; /* Sección redes sociales */
-    color: white;
-    margin: 10px;
-}
-
-#social ul {
-    list-style-type: none;
-    padding: 0; /* Asegúrate de que no haya padding adicional */
-}
-
-#social ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-#social ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    border: 2px solid white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    background: #451CE6; /* Color de botones */
-    transition: background 0.3s;
-}
-
-#social ul li a:hover {
-    background: #1C33E6; /* Color al pasar el mouse */
-}
 
 footer {
     width: 100%;
-    background: #6877E6; /* Color del footer */
+    background: #06000c; /* Color del footer */
     color: white;
     text-align: center;
-    padding: 10px;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
+
+h2 {
+    width: 100%;
+    background-color: #6039ca;
+    text-align: center;
+    margin-top: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+
+section.information {
+    display: none;
+    padding: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    width: 60%;
+    max-width: 1152px;
+    min-width: 768px;
+    background: #0e2a4e; /* Sección "Sobre mí" */
+    color: white;
+}
+
+section.information div.container {
+    display: inline-flex;
+    padding: 30px;
+    margin: 20px;
+    flex-direction: column; /* Cambia la dirección de los elementos a columna */
+    justify-content: center; /* Alinea horizontalmente */
+    align-items: center; /* Alinea verticalmente */
+    max-width: 1092px;
+    min-width: 708px;
+    margin: auto;
+}
+
+section.information div.moreinfo{
+    display: inline-flex;
+    padding: 0px;
+    margin-top: 20px;
+    justify-content: center; /* Alinea horizontalmente */
+    align-items:center;
+    max-width: 1092px;
+    width: 100%;
+    margin: auto;
+}
+section.information div.moreinfo button{
+    background-color: #131313;
+    color: #c0aff0;
+    font-size: 18px;
+    padding: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+section.information div.moreinfo button:hover{
+    background-color: #c0aff0;
+    color: #131313;
+}
+
+section.information div.moreinfo button#Networks{
+    border-top-left-radius: 8px;
+}
+section.information div.moreinfo button#MyWork{
+    border-top-right-radius: 8px;
+}
+section.information div.container  p{
+    text-align: justify;
+    font-size: 18px;
+
+}
+
+section.information#about {
+    display: inline-block;
+}
+
+
 #profilepic {
-    width: 20%;
-    height: 20%;
+    width: 200px; height: 200px; overflow: hidden;
     align-self: center;
-    border-radius: 100%;
+    border-radius: 50%;
+    border-color: #131313;
+    border-style: solid;
+    border-width: 1px;
 }
