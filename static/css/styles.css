@@ -1,12 +1,39 @@
+:root {
+    --body-width: 100%;
+    --body-max-width: 1920px;
+    --body-min-width: 580px;
+    
+    --header-width: 100%;
+    
+    --h1-width: 100%;
+    
+    --footer-width: 100%;
+    
+    --h2-width: 100%;
+    
+    --information-width: 60%;
+    --information-max-width: 1152px;/*basandonos en 1920 el 60% es este*/
+    --information-min-width: 348px;/*basandonos en 580 el 60% es este**/
+    
+    --container-max-width: 1092px;/*basandonos en 1920 el 60% es este - el padding (30px) resultante en x y y (60px)*/
+    --container-min-width: 288px;/*basandonos en 580 el 60% es este - el padding (30px) resultante en x y y (60px)*/
+    
+    --moreinfo-max-width: 1092px;
+    --moreinfo-width: 100%;
+    
+    --profilepic-width: 200px;
+}
+
 body {
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 100%;    
-    min-width: 1080px;
-    overflow:auto;
+    width: var(--body-width);
+    min-width: var(--body-min-width);
+    max-width: var(--body-max-width);
+    overflow: auto;
     margin: 0;
     padding: 0;
     font-family: 'Times New Roman', sans-serif;
@@ -19,38 +46,28 @@ header {
     padding-top: 20px;
     padding-bottom: 10px;
     text-align: center;
-    width: 100%;
+    width: var(--header-width);
     max-height: fit-content;
 }
+
 header h1 {
     margin: 0;
     padding-top: 10px;
     padding-bottom: 10px;
-    width: 100%;
+    width: var(--h1-width);
     text-align: center;
 }
-header p{
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-header a{
-    margin-top: 5px;
-    margin-bottom: 5px;
-    color: blanchedalmond;
-}
-
 
 footer {
-    width: 100%;
+    width: var(--footer-width);
     background: #06000c; /* Color del footer */
     color: white;
     text-align: center;
     margin-top: 50px;
 }
 
-
 h2 {
-    width: 100%;
+    width: var(--h2-width);
     background-color: #6039ca;
     text-align: center;
     margin-top: 0;
@@ -58,16 +75,15 @@ h2 {
     border-top-right-radius: 10px;
 }
 
-
 section.information {
     display: none;
     padding: 0px;
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 10px;
-    width: 60%;
-    max-width: 1152px;
-    min-width: 768px;
+    width: var(--information-width);
+    max-width: var(--information-max-width);
+    min-width: var(--information-min-width);
     background: #0e2a4e; /* Sección "Sobre mí" */
     color: white;
 }
@@ -79,19 +95,19 @@ section.information div.container {
     flex-direction: column; /* Cambia la dirección de los elementos a columna */
     justify-content: center; /* Alinea horizontalmente */
     align-items: center; /* Alinea verticalmente */
-    max-width: 1092px;
-    min-width: 708px;
+    max-width: var(--container-max-width);
+    min-width: var(--container-min-width);
     margin: auto;
 }
 
-section.information div.moreinfo{
+section.information div.moreinfo {
     display: inline-flex;
     padding: 0px;
     margin-top: 20px;
     justify-content: center; /* Alinea horizontalmente */
-    align-items:center;
-    max-width: 1092px;
-    width: 100%;
+    align-items: center;
+    max-width: var(--moreinfo-max-width);
+    width: var(--moreinfo-width);
     margin: auto;
 }
 section.information div.moreinfo button{
@@ -126,7 +142,9 @@ section.information#about {
 
 
 #profilepic {
-    width: 200px; height: 200px; overflow: hidden;
+    width: var(--profilepic-width);
+    height: 200px;
+    overflow: hidden;
     align-self: center;
     border-radius: 50%;
     border-color: #131313;
