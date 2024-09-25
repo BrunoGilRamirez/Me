@@ -1,0 +1,96 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #333;
+    color: #333;
+}
+
+header {
+    background: #871CE6; /* Color principal */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+h1 {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección de los elementos a columna */
+    justify-content: center; /* Alinea horizontalmente */
+    align-items: center; /* Alinea verticalmente */
+    width: 100%; /* Usar ancho completo */
+    margin: auto;
+}
+
+.information {
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    max-width: 900px; /* Para mantener responsividad */
+    width: 100%; /* Hacer que se ajuste al contenedor */
+}
+
+#about {
+    background: #1C73E6; /* Sección "Sobre mí" */
+    color: white;
+    margin: 10px;
+}
+
+#social {
+    background: #1CB3E6; /* Sección redes sociales */
+    color: white;
+    margin: 10px;
+}
+
+#social ul {
+    list-style-type: none;
+    padding: 0; /* Asegúrate de que no haya padding adicional */
+}
+
+#social ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+#social ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border: 2px solid white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: #451CE6; /* Color de botones */
+    transition: background 0.3s;
+}
+
+#social ul li a:hover {
+    background: #1C33E6; /* Color al pasar el mouse */
+}
+
+footer {
+    width: 100%;
+    background: #6877E6; /* Color del footer */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+#profilepic {
+    width: 20%;
+    height: 20%;
+    align-self: center;
+    border-radius: 100%;
+}
