@@ -152,6 +152,32 @@ section.information#about {
     border-width: 1px;
 }
 
+.social-icons {
+
+    margin-top: 20px; /* Espacio entre la sección y los íconos */
+    display: inline-flex; /* Cambia la disposición a flex */
+    flex-direction: column; /* Coloca los íconos en columna */
+    align-items: center; /* Centra los íconos horizontalmente */
+}
+
+
+.social-icons p{
+    text-align: center;
+    align-self: center;
+}
+.social-icon {
+    margin: 10px 0; /* Espaciado entre los íconos */
+    text-align: center; /* Centra el texto debajo del ícono */
+}
+
+.social-icons img {
+    width: 50%; /* Ajusta el tamaño de los íconos */
+    height: 50%; /* Ajusta el tamaño de los íconos */
+    cursor: pointer; /* Cambia el cursor al pasar sobre los íconos */
+}
+
+
+
 /* Responsividad para smartphones */
 @media screen and (max-width: 768px) {
     :root {

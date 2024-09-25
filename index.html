@@ -24,29 +24,51 @@
             <p>Computer Science Engineer with a strong interest in Back-end Development, Data Science, and Artificial Intelligence (LLMs). My current priority is to apply my knowledge in service of an organization, contributing and collaborating as a team, with a focus on achieving the best possible results.</p>
         </div>
         <div class="moreinfo">
-            <button id="Networks" >Networks</button>
-            <button id="MyResearch" >My Research</button>
-            <button id="MyWork" >My Work</button>
+            <button id="Networks" onclick="showSection('Networks_')">Networks</button>
+            <button id="MyResearch" onclick="showSection('My_Research')">My Research</button>
+            <button id="MyWork" onclick="showSection('My_Work')">My Work</button>
         </div>
     </section>
 
-    <section class="information" id="Networks">
+    <section class="information" id="Networks_">
         <h2>My Networks</h2>
         <div class="container">
-
+            <div class="social-icons">
+                <p>My Hugging Face Profile</p>
+                <div class="social-icon">
+                    <a href="https://huggingface.co/BrunoGR" target="_blank">
+                        <img src="static/images/huggingface_icon.svg" alt="Hugging Face" /> <!-- Cambia el nombre del archivo aquí -->
+                    </a>
+                </div>
+                <br>
+                <p>My GitHub Profile</p>
+                <div class="social-icon">
+                    <a href="https://github.com/BrunoGilRamirez" target="_blank">
+                        <img src="static/images/github-mark-white.png" alt="GitHub" /> <!-- Cambia el nombre del archivo aquí -->
+                    </a>
+                </div>
+                <br>
+                <p>My LinkedIn Profile</p>
+                <div class="social-icon">
+                    <a href="https://www.linkedin.com/in/brunogilram/" target="_blank">
+                        <img src="static/images/linkedin.png" alt="LinkedIn" /> <!-- Cambia el nombre del archivo aquí -->
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
-    <section class="information" id="My Research" >
+
+    <section class="information" id="My_Research">
         <h2>My Research</h2>
-        <div class="container" >
-
+        <div class="container">
+            <p>Contenido sobre mis investigaciones.</p>
         </div>
     </section>
 
-    <section class="information" id="My Work" >
+    <section class="information" id="My_Work">
         <h2>My Work</h2>
-        <div class="container" >
-
+        <div class="container">
+            <p>Contenido sobre mi trabajo.</p>
         </div>
     </section>
 
@@ -55,5 +77,6 @@
             <p>&copy; 2024 Bruno Gil</p>
         </div>
     </footer>
+    <script src="static/js/index.js"></script>
 </body>
 </html>
