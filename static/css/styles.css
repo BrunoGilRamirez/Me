@@ -1,4 +1,5 @@
 :root {
+    /* Definición de variables */
     --body-width: 100%;
     --body-max-width: 1920px;
     --body-min-width: 580px;
@@ -12,11 +13,11 @@
     --h2-width: 100%;
     
     --information-width: 60%;
-    --information-max-width: 1152px;/*basandonos en 1920 el 60% es este*/
-    --information-min-width: 348px;/*basandonos en 580 el 60% es este**/
+    --information-max-width: 1152px; /* 60% de 1920px */
+    --information-min-width: 348px; /* 60% de 580px */
     
-    --container-max-width: 1092px;/*basandonos en 1920 el 60% es este - el padding (30px) resultante en x y y (60px)*/
-    --container-min-width: 288px;/*basandonos en 580 el 60% es este - el padding (30px) resultante en x y y (60px)*/
+    --container-max-width: 1092px; /* 60% de 1920px - padding (30px) */
+    --container-min-width: 288px; /* 60% de 580px - padding (30px) */
     
     --moreinfo-max-width: 1092px;
     --moreinfo-width: 100%;
@@ -24,6 +25,7 @@
     --profilepic-width: 200px;
 }
 
+/* Estilos base */
 body {
     display: inline-flex;
     flex-direction: column;
@@ -119,27 +121,25 @@ section.information div.moreinfo button{
     padding-right: 8px;
 }
 
-section.information div.moreinfo button:hover{
+section.information div.moreinfo button:hover {
     background-color: #c0aff0;
     color: #131313;
 }
 
-section.information div.moreinfo button#Networks{
+section.information div.moreinfo button#Networks {
     border-top-left-radius: 8px;
 }
-section.information div.moreinfo button#MyWork{
+section.information div.moreinfo button#MyWork {
     border-top-right-radius: 8px;
 }
-section.information div.container  p{
+section.information div.container p {
     text-align: justify;
     font-size: 18px;
-
 }
 
 section.information#about {
     display: inline-block;
 }
-
 
 #profilepic {
     width: var(--profilepic-width);
@@ -151,3 +151,37 @@ section.information#about {
     border-style: solid;
     border-width: 1px;
 }
+
+/* Responsividad para smartphones */
+@media screen and (max-width: 768px) {
+    :root {
+        /* Ajustes para pantallas pequeñas */
+        --body-min-width: 320px;
+        --information-width: 90%; /* Mayor uso del espacio disponible */
+        --information-min-width: 300px;
+        --container-min-width: 300px; /* Se ajusta para no desbordar en pantallas pequeñas */
+        --profilepic-width: 150px; /* Tamaño reducido para pantallas pequeñas */
+    }
+
+    body {
+        width: 100%; /* Asegura que el body ocupe todo el ancho */
+    }
+
+    section.information {
+        width: var(--information-width); /* Ancho adaptativo */
+    }
+
+    section.information div.container {
+        padding: 20px; /* Reduce el padding en móviles */
+    }
+
+    section.information div.moreinfo {
+        width: var(--information-width);
+    }
+
+    #profilepic {
+        width: var(--profilepic-width);
+        height: var(--profilepic-width); /* Mantiene la proporción en dispositivos móviles */
+    }
+}
+
