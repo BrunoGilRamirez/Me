@@ -76,6 +76,9 @@ h2 {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
+a{
+    color:aliceblue
+}
 
 section.information {
     display: none;
