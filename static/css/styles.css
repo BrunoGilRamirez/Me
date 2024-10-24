@@ -1,7 +1,7 @@
 :root {
     /* Definición de variables */
     --body-width: 100%;
-    --body-max-width: 1920px;
+    --body-max-width: 4096px;
     --body-min-width: 580px;
     
     --header-width: 100%;
