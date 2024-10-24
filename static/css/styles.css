@@ -196,6 +196,22 @@ section.information#about {
     cursor: pointer; /* Cambia el cursor al pasar sobre los íconos */
 }
 
+.research-details {
+    background-color: #1c286d; /* Color de fondo */
+    border-radius: 10px; /* Bordes curvados */
+    padding: 15px; /* Espaciado interno */
+    margin-top: 10px; /* Espaciado superior */
+    border: 1px solid #6039ca; /* Borde */
+}
+
+.research-details h3 {
+    margin-top: 0; /* Eliminar margen superior */
+}
+
+.research-details p {
+    margin-bottom: 0; /* Eliminar margen inferior */
+}
+
 /* Responsividad para smartphones */
 @media screen and (max-width: 768px) {
     :root {
