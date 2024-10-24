@@ -20,13 +20,13 @@
     <section class="information" id="about">
         <h2>Sobre mí</h2>
         <div class="container">
-            <img id="profilepic" src="static/images/Profile_sq.png" alt="Me">
+            <img id="profilepic" src="static/images/Profile_sq.jpg" alt="Me">
             <p>Computer Science Engineer with a strong interest in Back-end Development, Data Science, and Artificial Intelligence (LLMs). My current priority is to apply my knowledge in service of an organization, contributing and collaborating as a team, with a focus on achieving the best possible results.</p>
         </div>
         <div class="moreinfo">
             <button id="Networks" onclick="showSection('Networks_')">Networks</button>
             <button id="MyResearch" onclick="showSection('My_Research')">My Research</button>
-            <button id="MyWork" onclick="showSection('My_Work')">My Work</button>
+            <button id="MyWork" onclick="showSection('My_Work')">Files</button>
         </div>
     </section>
 
@@ -36,22 +36,22 @@
             <div class="social-icons">
                 <p>My Hugging Face Profile</p>
                 <div class="social-icon">
-                    <a href="https://huggingface.co/BrunoGR" target="_blank">
-                        <img src="static/images/huggingface_icon.svg" alt="Hugging Face" /> <!-- Cambia el nombre del archivo aquí -->
+                    <a href="https://huggingface.co/BrunoGR" target="_blank" rel="noopener">
+                        <img src="static/images/huggingface_icon.svg" alt="Hugging Face" />
                     </a>
                 </div>
                 <br>
                 <p>My GitHub Profile</p>
                 <div class="social-icon">
-                    <a href="https://github.com/BrunoGilRamirez" target="_blank">
-                        <img src="static/images/github-mark-white.png" alt="GitHub" /> <!-- Cambia el nombre del archivo aquí -->
+                    <a href="https://github.com/BrunoGilRamirez" target="_blank" rel="noopener">
+                        <img src="static/images/github-mark-white.png" alt="GitHub" />
                     </a>
                 </div>
                 <br>
                 <p>My LinkedIn Profile</p>
                 <div class="social-icon">
-                    <a href="https://www.linkedin.com/in/brunogilram/" target="_blank">
-                        <img src="static/images/linkedin.png" alt="LinkedIn" /> <!-- Cambia el nombre del archivo aquí -->
+                    <a href="https://www.linkedin.com/in/brunogilram/" target="_blank" rel="noopener">
+                        <img src="static/images/linkedin.png" alt="LinkedIn" />
                     </a>
                 </div>
             </div>
@@ -66,9 +66,11 @@
     </section>
 
     <section class="information" id="My_Work">
-        <h2>My Work</h2>
+        <h2>Files</h2>
         <div class="container">
-            <p>Contenido sobre mi trabajo.</p>
+            <button class="files" onclick="downloadFile('static/files/Resume_BrunoGil2024_autumn.pdf')">My Resume</button>
+            <button class="files" onclick="downloadFile('static/files/116_poster.pdf')">Sólo Escúchame (Poster Version): Spanish Emotional Accompaniment Chatbot</button>
+            <button class="files" onclick="window.open('https://arxiv.org/abs/2408.01852', '_blank')">Sólo Escúchame: Spanish Emotional Accompaniment Chatbot</button>
         </div>
     </section>
 
@@ -77,6 +79,16 @@
             <p>&copy; 2024 Bruno Gil</p>
         </div>
     </footer>
+    <script>
+        function downloadFile(filePath) {
+            const link = document.createElement('a');
+            link.href = filePath;
+            link.download = filePath.split('/').pop();
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
     <script src="static/js/index.js"></script>
 </body>
 </html>
