@@ -29,6 +29,10 @@
             <button id="MyWork" onclick="showSection('My_Work')">Files</button>
         </div>
     </section>
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01" alt="Modal Image">
+    </div>
 
     <section class="information" id="Networks_">
         <h2>My Networks</h2>
@@ -91,6 +95,26 @@
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
+        }
+        // Obtener el modal
+        var modal = document.getElementById("imageModal");
+
+        // Obtener la imagen y el elemento modal de la imagen
+        var img = document.getElementById("profilepic");
+        var modalImg = document.getElementById("img01");
+
+        // Obtener el elemento de cierre
+        var span = document.getElementsByClassName("close")[0];
+
+        // Cuando el usuario hace clic en la imagen, abrir el modal
+        img.onclick = function(){
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        }
+
+        // Cuando el usuario hace clic en <span> (x), cerrar el modal
+        span.onclick = function() { 
+            modal.style.display = "none";
         }
     </script>
     <script src="static/js/index.js"></script>
